@@ -65,26 +65,6 @@ Tools:
 
 ---
 
-## 🧠 Hackathon Details
-
-Event: **Hack The Spring 2026 (HTS'26)**  
-Track: **Hack.X**  
-Theme: **Open Innovation**  
-Location: **Government Engineering College, Gandhinagar**  
-Date: **20–21 February 2026**
-
----
-
-## 👨‍💻 Team
-
-- Bhargav Zinzala  
-- Dharmik Pathak
-- Suhas Bakutra
-- Hitesh Maindh
-
----
-
-
 ## 🎯 Future Improvements
 
 - Mobile app for farmers
@@ -94,7 +74,3 @@ Date: **20–21 February 2026**
 - Integration with IoT sensors
 
 ---
-
-## 📜 License
-
-This project was created for educational and hackathon purposes.

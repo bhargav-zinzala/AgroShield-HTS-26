@@ -1,0 +1,290 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Agriculture themed background */
+body {
+    background-color: #e8f5e9; /* Light green */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand h1 {
+    color: #2e7d32; /* Dark leaf green */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.brand p {
+    color: #558b2f;
+    font-size: 1rem;
+}
+
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-card h2 {
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+.form-card p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #4caf50;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.secondary-btn:hover {
+    background-color: #f1f8e9;
+}
+
+.error {
+    color: #d32f2f !important;
+    margin-bottom: 10px;
+    display: none;
+}
+
+/* --- New Styles for Add Farm Page --- */
+
+.container {
+    width: 100%;
+    max-width: 600px; /* Made slightly wider to fit the map nicely */
+    padding: 20px;
+}
+
+.farm-setup-card {
+    text-align: left; /* Align text to the left for standard forms */
+}
+
+.farm-setup-card h2, .farm-setup-card p {
+    text-align: center;
+}
+
+#farm-map {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+    z-index: 1; /* Keeps map rendering properly */
+}
+
+.hint {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #f57c00;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+/* --- Manual Coordinate Styles --- */
+.manual-input-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.manual-input-section h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.coord-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.coord-inputs input {
+    margin-bottom: 0; /* Remove default margin */
+}
+
+.coord-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.warning { color: #f57c00; border: 1px solid #f57c00; }
+.warning:hover { background-color: #fff3e0; }
+
+.danger { color: #d32f2f; border: 1px solid #d32f2f; }
+.danger:hover { background-color: #ffebee; }
+
+#point-list {
+    list-style: none;
+    padding: 0;
+    max-height: 100px;
+    overflow-y: auto;
+    border-top: 1px solid #eee;
+}
+
+#point-list li {
+    font-size: 0.85rem;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+
+/* --- Dashboard Styles --- */
+.dashboard-body {
+    display: block; /* Overrides the flex centering from login */
+    background-color: #f4f6f4;
+}
+
+.navbar {
+    background-color: #2e7d32;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.dash-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid #4caf50;
+}
+
+.dash-card h3 {
+    color: #1b5e20;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.status-indicator {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.status-indicator.good { background-color: #e8f5e9; color: #2e7d32; }
+.status-indicator.warning { background-color: #fff3e0; color: #ef6c00; }
+
+.recommendation-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recommendation-list li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-left: 3px solid #4caf50;
+    font-size: 0.9rem;
+}

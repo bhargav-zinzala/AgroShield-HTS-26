@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroShield - Add Farm Details</title>
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-card farm-setup-card">
+            <h2>Farm Setup</h2>
+            <p>Draw on the map OR enter coordinates manually.</p>
+
+            <div id="farm-map"></div>
+            <p id="map-status" class="hint">Map Status: Waiting for input...</p>
+
+            <div class="manual-input-section">
+                <h3>Manual Coordinate Entry</h3>
+                <div class="coord-inputs">
+                    <input type="number" id="lat-input" placeholder="Latitude (e.g. 23.21)" step="any">
+                    <input type="number" id="lng-input" placeholder="Longitude (e.g. 72.63)" step="any">
+                    <button type="button" class="secondary-btn" onclick="addManualPoint()">Add Point</button>
+                </div>
+                <div class="coord-actions">
+                    <button type="button" class="secondary-btn warning" onclick="removeLastPoint()">Undo Last</button>
+                    <button type="button" class="secondary-btn danger" onclick="clearAllPoints()">Clear All</button>
+                </div>
+                <ul id="point-list"></ul>
+            </div>
+
+            <hr>
+
+            <div class="input-group">
+                <label for="crop-name">Crop Placed:</label>
+                <input type="text" id="crop-name" value="Tomato" readonly>
+            </div>
+
+            <div class="input-group">
+                <label for="planting-date">Date of Planting:</label>
+                <input type="date" id="planting-date">
+            </div>
+
+            <div class="input-group">
+                <label for="soil-type">Soil Type (India):</label>
+                <select id="soil-type">
+                    <option value="" disabled selected>Select Soil Type</option>
+                    <option value="Alluvial">Alluvial Soil</option>
+                    <option value="Black">Black (Regur) Soil</option>
+                    <option value="Red">Red & Yellow Soil</option>
+                    <option value="Laterite">Laterite Soil</option>
+                    <option value="Arid">Arid / Desert Soil</option>
+                    <option value="Mountain">Mountain / Forest Soil</option>
+                </select>
+            </div>
+
+            <button onclick="saveFarmDetails()">Save Farm & Go to Dashboard</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

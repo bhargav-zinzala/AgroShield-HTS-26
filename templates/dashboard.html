@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroShield - Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="dashboard-body">
+
+    <nav class="navbar">
+        <div class="brand">
+            <h1 style="color: white; margin: 0; font-size: 1.5rem;">AgroShield Dashboard</h1>
+        </div>
+        <button class="secondary-btn" style="color: white; border-color: white;" onclick="logout()">Logout</button>
+    </nav>
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <header class="dashboard-header">
+            <h2>Welcome Back, <span id="user-phone">Farmer</span>!</h2>
+            <p>Here is the latest data for your <span id="dash-crop">Crop</span> planted on <span id="dash-date">Date</span>.</p>
+            <p><strong>Soil Type:</strong> <span id="dash-soil">Loading...</span></p>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="dash-card weather-card">
+                <h3>🌤️ Weather Overview</h3>
+                <div class="card-content">
+                    <p><strong>Current:</strong> 28°C, Partly Cloudy</p>
+                    <p><strong>Humidity:</strong> 65%</p>
+                    <p><strong>Forecast:</strong> Light rain expected tomorrow evening.</p>
+                </div>
+            </div>
+
+            <div class="dash-card health-card">
+                <h3>🌿 Crop Health Status</h3>
+                <div class="card-content">
+                    <div class="status-indicator good">Optimal</div>
+                    <p>Satellite imagery indicates healthy chlorophyll levels in 92% of your mapped area.</p>
+                </div>
+            </div>
+
+            <div class="dash-card pest-card">
+                <h3>🐛 Pest Risk Prediction</h3>
+                <div class="card-content">
+                    <div class="status-indicator warning">Moderate Risk</div>
+                    <p>High humidity over the next 48 hours increases the risk of <strong>Whiteflies</strong> and <strong>Blight</strong> in tomatoes.</p>
+                </div>
+            </div>
+
+            <div class="dash-card action-card">
+                <h3>📋 Smart Recommendations</h3>
+                <ul class="recommendation-list">
+                    <li>Apply organic neem oil spray tomorrow morning before the rain.</li>
+                    <li>Hold off on heavy irrigation; soil moisture is sufficient.</li>
+                    <li>Inspect the lower leaves for early signs of fungal spotting.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

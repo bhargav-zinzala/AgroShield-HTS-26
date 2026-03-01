@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroShield - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="brand">
+            <h1>AgroShield</h1>
+            <p>Empowering Farmers with Data</p>
+        </div>
+
+        <div class="form-card" id="phone-section">
+            <h2>Welcome</h2>
+            <p>Enter your mobile number to continue</p>
+            <input type="tel" id="mobile-number" placeholder="e.g., 9876543210" maxlength="10">
+            <button onclick="sendOTP()">Get OTP</button>
+        </div>
+
+        <div class="form-card" id="otp-section" style="display: none;">
+            <h2>Verify Mobile</h2>
+            <p>Enter the OTP sent to your number. (Hint: use 123456)</p>
+            <input type="text" id="otp-input" placeholder="Enter 6-digit OTP" maxlength="6">
+            <p id="error-message" class="error"></p>
+            <button onclick="verifyOTP()">Verify & Login</button>
+            <button class="secondary-btn" onclick="goBack()">Change Number</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
